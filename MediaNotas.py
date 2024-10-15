@@ -10,3 +10,5 @@ for x in range(4):
 
 media /= 4
 
+print(media)
+
