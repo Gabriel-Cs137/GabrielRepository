@@ -15,25 +15,22 @@ def pedir_numero():
 def calc(type,nm):
     global primo, primer, primo2
     
-    if type == 1:
-        if nm <= 1:
-            primer = False
-        elif nm == 2 or nm == 3 or nm == 5 or nm == 7:
-            primer = True
-        else:
+    if nm <= 1:
+        primer = False
+    elif nm == 2 or nm == 3 or nm == 5 or nm == 7:
+        primer = True
+    else:
 
-            for x in primo2:
-                if nm % x != 0:
+        for x in primo2:
+            if nm % x != 0:
                     primer = True
-                else:
+            else:
                     primer = False
                     break
-            if primer == True:
-                primo2.append(nm)
-                primo.append(nm)
+        if primer == True:
+            primo2.append(nm)
+            primo.append(nm)
 
-    else:
-        pass
 while True:
         verif = input('O que gostaria de fazer?\n[1- Verificar se um número é primo]\n[2-Verificar quais numeros dentro de um range]\n[3- Fechar o sistema]\n[]:')
         if verif == '1':
